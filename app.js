@@ -13,9 +13,9 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var localStrategy = require('passport-local').Strategy;
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var articles = require('./routes/articles');
+var routes = require('./routes/home');
+var users = require('./routes/registration');
+var articles = require('./routes/business');
 var auth = require('./routes/auth');
 
 var app = express();
@@ -71,7 +71,7 @@ db.once('open', function(callback) {
 // mongoose.connect('mongodb://localhost/test');
 
 // connect to mlab instance directly
-// mongoose.connect('mongodb://gcrfreeman:2106pass@ds056288.mlab.com:56288/comp2106');
+// mongoose.connect('mongodb://gc200292856:200292856@ds064748.mlab.com:64748/gc200292856');
 
 // read db connection string from our config file
 var configDb = require('./config/db.js');
